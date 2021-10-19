@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-10-19T02:58:19.800Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36" etag="79-jcxbw0ZQTuR660vfv" version="15.5.5" type="github">
+<mxfile host="app.diagrams.net" modified="2021-10-19T03:03:26.242Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36" etag="b2vjLXeuQbX1pCtHrbhf" version="15.5.5" type="github">
   <diagram id="Ej70ZjaEq2M4L3pgRUde" name="Page-1">
     <mxGraphModel dx="1422" dy="705" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -107,6 +107,21 @@
         </mxCell>
         <mxCell id="VzXeBZxzgqzsdJ8qDBCJ-64" value="Publish" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn3.iconfinder.com/data/icons/software-engineering-and-video-gaming/512/602_Launch_mission_shuttle_startup_publish-128.png;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="970" y="374" width="77.5" height="77.5" as="geometry" />
+        </mxCell>
+        <mxCell id="VzXeBZxzgqzsdJ8qDBCJ-68" value="" style="shape=ext;double=1;rounded=1;whiteSpace=wrap;html=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="540" y="540" width="530" height="155" as="geometry" />
+        </mxCell>
+        <mxCell id="VzXeBZxzgqzsdJ8qDBCJ-71" value="&lt;b&gt;Build Version&lt;br&gt;Build Env&amp;nbsp;&lt;/b&gt;" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=25;verticalAlign=top;align=left;spacingLeft=5;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="550" y="600" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VzXeBZxzgqzsdJ8qDBCJ-72" value="Promotion Input" style="resizeWidth=1;part=1;strokeColor=none;fillColor=none;align=left;spacingLeft=5;fontSize=10;fontStyle=1" vertex="1" parent="VzXeBZxzgqzsdJ8qDBCJ-71">
+          <mxGeometry width="160" height="25" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VzXeBZxzgqzsdJ8qDBCJ-73" value="Deployment&lt;br&gt;&amp;nbsp;Pipeline" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="430" y="140.75" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VzXeBZxzgqzsdJ8qDBCJ-74" value="Deployment Pipeline" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="600" y="350" width="110" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
