@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-10-19T03:03:26.242Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36" etag="b2vjLXeuQbX1pCtHrbhf" version="15.5.5" type="github">
+<mxfile host="app.diagrams.net" modified="2021-10-19T03:10:06.712Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36" etag="5mhWhnKcIv6Iag_OPRYv" version="15.5.5" type="github">
   <diagram id="Ej70ZjaEq2M4L3pgRUde" name="Page-1">
     <mxGraphModel dx="1422" dy="705" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -73,6 +73,14 @@
         <mxCell id="VzXeBZxzgqzsdJ8qDBCJ-41" value="" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/devops/Azure_DevOps.svg;" vertex="1" parent="1">
           <mxGeometry x="390" y="135.75" width="40" height="40" as="geometry" />
         </mxCell>
+        <mxCell id="VzXeBZxzgqzsdJ8qDBCJ-86" value="Build file &lt;br&gt;Repo" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;" edge="1" parent="1" source="VzXeBZxzgqzsdJ8qDBCJ-53" target="VzXeBZxzgqzsdJ8qDBCJ-85">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="805" y="510" />
+              <mxPoint x="305" y="510" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
         <mxCell id="VzXeBZxzgqzsdJ8qDBCJ-53" value="" style="shape=ext;double=1;rounded=1;whiteSpace=wrap;html=1;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="540" y="331.75" width="530" height="155" as="geometry" />
         </mxCell>
@@ -109,7 +117,15 @@
           <mxGeometry x="970" y="374" width="77.5" height="77.5" as="geometry" />
         </mxCell>
         <mxCell id="VzXeBZxzgqzsdJ8qDBCJ-68" value="" style="shape=ext;double=1;rounded=1;whiteSpace=wrap;html=1;fontSize=10;" vertex="1" parent="1">
-          <mxGeometry x="540" y="540" width="530" height="155" as="geometry" />
+          <mxGeometry x="540" y="540" width="540" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="VzXeBZxzgqzsdJ8qDBCJ-80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.014;entryY=0.6;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=10;" edge="1" parent="1" source="VzXeBZxzgqzsdJ8qDBCJ-71" target="VzXeBZxzgqzsdJ8qDBCJ-79">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="750" y="630" />
+              <mxPoint x="750" y="667" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="VzXeBZxzgqzsdJ8qDBCJ-71" value="&lt;b&gt;Build Version&lt;br&gt;Build Env&amp;nbsp;&lt;/b&gt;" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=25;verticalAlign=top;align=left;spacingLeft=5;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="550" y="600" width="160" height="60" as="geometry" />
@@ -122,6 +138,38 @@
         </mxCell>
         <mxCell id="VzXeBZxzgqzsdJ8qDBCJ-74" value="Deployment Pipeline" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="600" y="350" width="110" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="VzXeBZxzgqzsdJ8qDBCJ-76" value="" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/devops/Azure_DevOps.svg;" vertex="1" parent="1">
+          <mxGeometry x="560" y="550" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="VzXeBZxzgqzsdJ8qDBCJ-77" value="Promotion Pipeline" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="600" y="560" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="VzXeBZxzgqzsdJ8qDBCJ-81" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.014;entryY=0.6;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=10;" edge="1" parent="1" source="VzXeBZxzgqzsdJ8qDBCJ-78" target="VzXeBZxzgqzsdJ8qDBCJ-79">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="750" y="720" />
+              <mxPoint x="750" y="667" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VzXeBZxzgqzsdJ8qDBCJ-78" value="Manual Approval" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn4.iconfinder.com/data/icons/music-ui-solid-24px/24/tick_success_done_valid-2-128.png;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="590" y="690" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VzXeBZxzgqzsdJ8qDBCJ-83" value="Sucess" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=10;" edge="1" parent="1" source="VzXeBZxzgqzsdJ8qDBCJ-79" target="VzXeBZxzgqzsdJ8qDBCJ-82">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VzXeBZxzgqzsdJ8qDBCJ-79" value="Validate" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/material-core/20/check-circle-outline-128.png;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="800" y="625" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="VzXeBZxzgqzsdJ8qDBCJ-82" value="Deploy" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn2.iconfinder.com/data/icons/competitive-strategy-and-corporate-training/512/730_management_process_production_task_work_Business_Management-128.png;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="940" y="615" width="90" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="VzXeBZxzgqzsdJ8qDBCJ-89" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=10;" edge="1" parent="1" source="VzXeBZxzgqzsdJ8qDBCJ-85" target="VzXeBZxzgqzsdJ8qDBCJ-68">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VzXeBZxzgqzsdJ8qDBCJ-85" value="" style="sketch=0;aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/mscae/Azure_Artifacts.svg;" vertex="1" parent="1">
+          <mxGeometry x="280" y="635" width="50" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
