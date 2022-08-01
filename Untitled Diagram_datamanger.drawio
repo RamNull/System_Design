@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-08-01T04:40:27.862Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" etag="KRixo2dLUVqa_2vqT3Jr" version="20.2.2" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-08-01T04:53:44.629Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" etag="nc0DISg-kZNGqvtQkOUY" version="20.2.2" type="github" pages="2">
   <diagram id="wFE0QG_FPsp0jaGvCLVb" name="Page-1">
     <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -192,7 +192,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="Updated Data Manager" id="ngaPZGkUSRhR5pr8Eouw">
-    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1422" dy="705" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="Bi1DADkigFlcZalxDx-v-0" />
         <mxCell id="Bi1DADkigFlcZalxDx-v-1" parent="Bi1DADkigFlcZalxDx-v-0" />
@@ -309,7 +309,7 @@
         <mxCell id="017NK41Gsh_eKYVLixFS-35" value="Generic Data Model" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="Bi1DADkigFlcZalxDx-v-1">
           <mxGeometry x="395" y="350" width="70" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="017NK41Gsh_eKYVLixFS-36" value="Generic Data Model" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="Bi1DADkigFlcZalxDx-v-1">
+        <mxCell id="017NK41Gsh_eKYVLixFS-36" value="interface" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="Bi1DADkigFlcZalxDx-v-1">
           <mxGeometry x="315.38" y="350" width="70" height="40" as="geometry" />
         </mxCell>
         <mxCell id="017NK41Gsh_eKYVLixFS-37" value="Data Parser" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn2.iconfinder.com/data/icons/thin-line-icons-for-seo-and-development-1/64/SEO_cogwheels_setting-128.png" vertex="1" parent="Bi1DADkigFlcZalxDx-v-1">
