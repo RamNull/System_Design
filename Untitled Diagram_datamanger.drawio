@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-08-10T03:54:04.430Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" etag="R8WN0-kJgw7yM2Tj7_ox" version="20.2.3" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2022-08-16T03:04:27.228Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36" etag="LwoOz5DYPAgKHUtGpG6l" version="20.2.3" type="github" pages="3">
   <diagram id="wFE0QG_FPsp0jaGvCLVb" name="Page-1">
-    <mxGraphModel dx="1038" dy="537" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1038" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -192,7 +192,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="Updated Data Manager" id="ngaPZGkUSRhR5pr8Eouw">
-    <mxGraphModel dx="1038" dy="537" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1038" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="Bi1DADkigFlcZalxDx-v-0" />
         <mxCell id="Bi1DADkigFlcZalxDx-v-1" parent="Bi1DADkigFlcZalxDx-v-0" />
@@ -315,6 +315,9 @@
         </mxCell>
         <mxCell id="KeUNMcnJilpUxLnvDPXe-30" value="&lt;b&gt;Database Providers&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="Bi1DADkigFlcZalxDx-v-1" vertex="1">
           <mxGeometry x="498" y="533" width="121" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5Q-P8ynl5GBuhetresrc-0" value="Managed Data Object Service" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="Bi1DADkigFlcZalxDx-v-1">
+          <mxGeometry x="503" y="320" width="92" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
