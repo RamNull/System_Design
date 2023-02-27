@@ -1,1 +1,43 @@
-<mxfile host="app.diagrams.net" modified="2023-02-27T14:54:44.742Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36" version="20.8.1" etag="DfzEcfsWtzwnUh7eK9eq" type="github"><diagram id="dbYgLUsFtefwBH11ggs1">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2023-02-27T15:23:02.646Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36" version="20.8.1" etag="X9zmkmViXrQlCrgHZ5Lx" type="github">
+  <diagram id="PPvhGRrnSJBHcDH-iYAf" name="Page-1">
+    <mxGraphModel dx="1050" dy="1591" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="7WYr4HtIH5gWZL--20nb-1" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="-140" width="620" height="450" as="geometry" />
+        </mxCell>
+        <mxCell id="7WYr4HtIH5gWZL--20nb-2" value="Unified Service &lt;br&gt;Dashboard" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#434445;aspect=fixed;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.vvd.nsx_dashboard;" vertex="1" parent="1">
+          <mxGeometry x="130" y="-99.99" width="50" height="46.5" as="geometry" />
+        </mxCell>
+        <mxCell id="7WYr4HtIH5gWZL--20nb-3" value="Trace Navigator" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/iconoir-vol-3/24/navigator-alt-128.png" vertex="1" parent="1">
+          <mxGeometry x="249.25" y="-111.74000000000001" width="65.75" height="65.75" as="geometry" />
+        </mxCell>
+        <mxCell id="7WYr4HtIH5gWZL--20nb-4" value="Dynamic &lt;br&gt;Service Map" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-map-128.png" vertex="1" parent="1">
+          <mxGeometry x="380" y="-109.62" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="7WYr4HtIH5gWZL--20nb-5" value="Root cause Error&lt;br&gt;Mapping" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/material-core/20/error-128.png" vertex="1" parent="1">
+          <mxGeometry x="520" y="-111.74000000000001" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="7WYr4HtIH5gWZL--20nb-6" value="Service Alert with&lt;br&gt;Trace Context" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn4.iconfinder.com/data/icons/internet-networking-and-communication-glyph-24/24/Alert_bell_notification_ring_snooze-128.png" vertex="1" parent="1">
+          <mxGeometry x="115" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="7WYr4HtIH5gWZL--20nb-7" value="Latency Contribution&lt;br&gt;Analysis" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn3.iconfinder.com/data/icons/analytic-investment-and-balanced-scorecard/512/634_Analysis_analytics_business_financial_research-128.png" vertex="1" parent="1">
+          <mxGeometry x="515" y="20" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="7WYr4HtIH5gWZL--20nb-9" value="Infinite Cardinality&lt;br&gt;Trace Exploration" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/material-core/20/explore-128.png" vertex="1" parent="1">
+          <mxGeometry x="120" y="150" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="7WYr4HtIH5gWZL--20nb-10" value="AI driven Problem&lt;br&gt;Detection And Alerts" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/software-engineering-and-video-gaming/512/487_Ai_brain_future_intelligence_machine_Data_Science_Fabrication_Lab-128.png" vertex="1" parent="1">
+          <mxGeometry x="380" y="20" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="7WYr4HtIH5gWZL--20nb-16" value="Auto &amp;amp; Custom&lt;br&gt;Instrumentation" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn0.iconfinder.com/data/icons/faticons-2/30/wheel4-128.png" vertex="1" parent="1">
+          <mxGeometry x="243.72" y="150" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="7WYr4HtIH5gWZL--20nb-17" value="Service to Infra&lt;br&gt;Correlation" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn2.iconfinder.com/data/icons/competitive-strategy-and-corporate-training/512/165_Infrastructure_monitoring_surveillance_vision_eye_network_cloud_smart_computing-128.png" vertex="1" parent="1">
+          <mxGeometry x="243.72" y="15" width="90" height="90" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
