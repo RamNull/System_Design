@@ -1,0 +1,359 @@
+openapi: 3.0.0
+info:
+  title: Public Key API
+  description: API for retrieving a public key for encryption purposes
+  version: 1.0.1
+servers:
+  - url: https://smartsecurity-pie.tropos-rnd.com/securestorageservice
+paths:
+  /secrets/publickey:
+    get:
+      summary: Get Public Key of the Secure Storage Service
+      description: Retrieve the public key used for encryption
+      responses:
+        '200':
+          description: Successful response with public key
+          content:
+            application/json:
+              schema: 
+                type: object
+                properties:
+                  key:
+                    type: string
+                    description: The public key for encryption 
+                  KeyId:
+                    type: string
+                    description: The public key Id for encryption
+                    example: PublicKeyId_123
+                  expiryDate:
+                    type: string
+                    format: date-time
+                    description: The public key  created Date for encryption
+      tags:
+        - Secrets
+  /secrets/saveSecretGrant:
+    post:
+      summary: Get the target for the secret ID
+      description: Save a secret grant with optional scope validation.
+      operationId: saveSecretGrant
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SecretGrant'
+            example:
+              secretValues:
+                - secretString: "Ghzv+uRSN+VM3M0pmUdLKuneDZHIfFMDOrWZZBn3W/qAZmaOSFUIEEiXZq6oXj6AM8r054rLLIvtf0HfURA+ZRAEmHFbrwp3w59ra35CFbJMTmM0ETnIa3I1Of5T7gW7fq7PlurimC98HIepl1ouCaDwMe60VCcnSIolEFz5CBvKca/5P/zYoAX81LWyLH8WJOo6pclXYUb6f8KnkTPKQZv0ZkuYC704RIs7qYsQMXCQJQBccjDns6o1V1dIyYd4Xqaj/PBmd81+hvUhomjsePH1NHTRaMUXhV2bnTASx9qEAZkWdoyAt7QajpYTqM8rsWU8XuJWwJcPUgplNDPgqGaZnv2GUNKOTLAMsSWyokdf6seiiFcJu5Zx56l6YO3A8xmfqGBs+DiysH9lAi0duJYpnKJe/VV2pq+cdXJLHZ5+NNuqwK0Ffw4PwBiIrtvbPqqrDiuZcH5l63CGKgo4RVOpHFoROEHmyXAsQd0VA9tmJrnAuhHcI/eRSBLLnoOZjuw+MFj9Iy1Eb3vbZ0nRCHkOesMTCIiYOlrMvlOjpEVdqAVlVyGYgc1GWzTVIIfJVhibVAEI/OK587hLHMGHSXA/4zTcL2J3ixsMhZcNmhnHbQqV7TjrHpaXD80biEGSMh8LHZBMhJZf75OzY3Cl1+jKqjfsfEc+eD86ZQaSD/0="
+                  ordinal: 1
+              keyId: "08716d42-e8ed-43ee-b623-773e85364a45"
+              grantPolicy:
+                version: "1.0.0"
+                metadata: {}
+                grants:
+                  tenantID:
+                    - "tenant1"
+                  serviceId:
+                    - "service1"
+                    - "service2"
+                    - "service3"
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          schema:
+            type: string
+          description: Bearer token for authentication
+        - name: skipScopeValidation
+          in: header
+          required: false
+          schema:
+            type: boolean
+            default: false
+          description: Skip scope validation if true
+      responses:
+        '202':
+          description: Accepted
+          content:
+            application/json:
+              schema:
+                type: string
+                example: "4c6b2dc7-a1a1-490f-88b1-73831994e514"
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SecureStorageExceptionMsg'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SecureStorageExceptionMsg'
+      tags:
+        - Secrets
+  /secrets/getSecret/{secretId}:
+    post:
+      summary: Save or update a secret
+      description: Retrieve and encrypt a secret for a given target using the public key of the requester.
+      operationId: getSecretWithTarget
+      parameters:
+        - name: secretId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Unique identifier for the secret
+        - name: targetId
+          in: header
+          required: true
+          schema:
+            type: string
+          description: ID of the target requesting the secret
+        - name: Authorization
+          in: header
+          required: true
+          schema:
+            type: string
+          description: Bearer token for authentication
+        - name: skipScopeValidation
+          in: header
+          required: false
+          schema:
+            type: boolean
+            default: false
+          description: Skip scope validation if true
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties:
+                type: string
+              description: Grants information required to retrieve the secret
+            example:
+              tenantID: ["tenant1"]
+              test: ["a1", "a2", "a100"]
+      responses:
+        '202':
+          description: Accepted
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/SecretValue'
+              example:
+                - secretString: "encryptedSecretString1"
+                  ordinal: 1
+                - secretString: "encryptedSecretString2"
+                  ordinal: 2
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SecureStorageExceptionMsg'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SecureStorageExceptionMsg'
+      tags:
+        - Secrets
+  /schedule/private/rotateKey:
+    get:
+      summary: Rotate the public key and update the details in the database
+      description: >
+        This method is used to rotate the key and update the details in the database. 
+        It can be accessed only by private services that are registered to the same private VPN as the Secure Storage Service - AWS Cloud Watch Scheduler.
+      operationId: rotateKey
+      responses:
+        '202':
+          description: Accepted
+          content:
+            application/json:
+              schema:
+                type: string
+              example: "Key rotation accepted and will be processed."
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SecureStorageExceptionMsg'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SecureStorageExceptionMsg'
+      tags:
+        - Scheduler
+  /register/registerTarget:
+    post:
+      summary: Register the target for white listing
+      description: >
+        Target is white-listed for the service, enabling the service to use the public key of the target for data encryption.
+      operationId: saveWhiteListService
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WhiteList'
+            example:
+              serviceId: "service-123"
+              serviceName: "SecureDataService"
+              serviceType: "data-encryption"
+              publicKey: "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQ..."
+              tag: ["secure", "encrypted", "whitelisted"]
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          schema:
+            type: string
+          description: Token of the user trying to access the service
+        - name: skipScopeValidation
+          in: header
+          required: false
+          schema:
+            type: boolean
+            default: false
+          description: Whether to skip scope validation (optional)
+      responses:
+        '202':
+          description: Accepted
+          content:
+            application/json:
+              schema:
+                type: string
+              example: "White list service registered successfully."
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SecureStorageExceptionMsg'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SecureStorageExceptionMsg'
+      tags:
+        - WhiteList
+
+components:
+  schemas:
+    WhiteList:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the white-listed entry
+        serviceId:
+          type: string
+          description: Unique identifier for the service being white-listed
+        serviceName:
+          type: string
+          description: Name of the service being white-listed
+        serviceType:
+          type: string
+          description: Type of the service (optional)
+        publicKey:
+          type: string
+          description: Public key of the target for encryption purposes
+        tag:
+          type: array
+          items:
+            type: string
+          description: List of tags for the white-listed entry (optional)
+      required:
+        - serviceId
+        - serviceName
+        - publicKey
+
+    SecretGrant:
+      type: object
+      properties:
+        secretValues:
+          type: array
+          items:
+            $ref: '#/components/schemas/SecretValue'
+        keyId:
+          type: string
+          description: Unique identifier for the secret key
+        grantPolicy:
+          $ref: '#/components/schemas/Grant'
+      required:
+        - secretValues
+        - keyId
+        - grantPolicy
+
+    SecretValue:
+      type: object
+      properties:
+        secretString:
+          type: string
+          description: Encrypted secret string
+        ordinal:
+          type: integer
+          description: Order of the secret value
+      required:
+        - secretString
+        - ordinal
+
+    Grant:
+      type: object
+      properties:
+        version:
+          type: string
+          description: Grant policy version
+        metadata:
+          type: object
+          description: Metadata associated with the grant policy
+        grants:
+          type: object
+          additionalProperties:
+            type: array
+            items:
+              type: string
+          description: Map of grants associated with the policy
+      required:
+        - version
+        - grants
+
+    SecureStorageExceptionMsg:
+      type: object
+      properties:
+        version:
+          type: string
+          description: API version
+        httpCode:
+          type: integer
+          description: HTTP status code
+        errorCode:
+          type: string
+          description: Code representing the specific error
+        description:
+          type: string
+          description: Short description of the error
+        timestamp:
+          type: string
+          format: date-time
+          description: Time the error occurred
+        errorDescription:
+          type: string
+          description: Detailed error message
+      required:
+        - version
+        - httpCode
+        - errorCode
+        - description
+        - timestamp
+        - errorDescription
